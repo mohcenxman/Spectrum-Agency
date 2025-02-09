@@ -43,28 +43,67 @@ body {
   align-items: center;
 }
 .header .logo {
-width: 50px;
+  width: 50px;
 }
 .header .links {
-position: relative;
+  position: relative;
+}
+.header .links:hover .icon span:nth-child(2) {
+  width: 100%;
 }
 .header .links .icon {
-width: 30px;
-display: flex;
-flex-wrap: wrap;
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 .header .links .icon span {
-background-color: #333;
-margin-bottom: 5px;
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 3px;
 }
 .header .links .icon span:first-child {
-
+  width: 100%;
 }
 .header .links .icon span:nth-child(2) {
-  
+  width: 60%;
+  transition: 0.3s;
 }
 .header .links .icon span:last-child {
-  
+  width: 100%;
 }
-
+.header .links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 150px;
+  top: calc(100% + 15px);
+  display: none;
+  transition: 0.3s;
+}
+.header .links:hover ul {
+  display: block;
+}
+.header .links ul::before {
+  content: "";
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+  top: -18px;
+  right: 5px;
+}
+.header .links ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+.header .links ul li a:hover {
+  padding-left: 20px;
+}
 /* End Header */
