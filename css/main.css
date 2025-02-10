@@ -1,3 +1,9 @@
+/* Start Variables */
+:root {
+  --main-color: #03A9F4;
+}
+/* End Variables */
+
 /* Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
@@ -83,6 +89,7 @@ body {
   top: calc(100% + 15px);
   display: none;
   transition: 0.3s;
+  z-index: 1;
 }
 .header .links:hover ul {
   display: block;
@@ -107,3 +114,31 @@ body {
   padding-left: 20px;
 }
 /* End Header */
+
+/* Start Landing Section */
+.landing {
+  background-image: url(../image/landing.jpg);
+  background-size: cover;
+  height: calc(100vh - 64px);
+  position: relative;
+}
+.landing .intro-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  max-width: 100%;
+}
+.landing .intro-text h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+.landing .intro-text p {
+  font-size: 20px;
+  line-height: 1.8;
+}
+/*End Landing Section */
