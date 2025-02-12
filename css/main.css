@@ -1,6 +1,7 @@
 /* Start Variables */
 :root {
   --main-color: #03A9F4;
+  --secondary-color: #607d8b;
 }
 /* End Variables */
 
@@ -38,6 +39,22 @@ body {
   }
 }
 /* End Global Rules */
+
+/* Start Components */
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  text-align: center;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -30px 0 0;
+  font-size: 20px;
+  text-align: center;
+}
+/* End Components */
 
 /* Start Header */
 .header {
@@ -141,9 +158,9 @@ body {
   font-size: 20px;
   line-height: 1.8;
 }
-/*End Landing Section */
+/* End Landing Section */
 
-/*Start Features Section */
+/* Start Features Section */
 .features {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -170,4 +187,66 @@ body {
   line-height: 1.8;
   color: #777;
 }
-/*End Features Section */
+/* End Features Section */
+
+/* Start Services Section */
+.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.services .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 100px;
+}
+.services .services-content .service {
+  display: flex;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .services .services-content .service {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.services .services-content .service i {
+  color: var(--main-color);
+  flex-basis: 60px;
+}
+.services .services-content .service .text {
+  flex: 1;
+}
+.services .services-content .service .text h3 {
+  margin: 0 0 20px;
+}
+.services .services-content .service .text p {
+  color: #444;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.services .services-content .image {
+  text-align: center;
+  position: relative;
+}
+.services .services-content .image::before {
+  content: "";
+  position: absolute;
+  background-color: var(--secondary-color);
+  width: 80px;
+  height: calc(100% + 100px);
+  right: 0;
+  top: -30px;
+  z-index: -1;
+}
+.services .services-content .image img {
+  width: 300px;
+  margin-top: 40px;
+}
+@media (max-width: 1199px) {
+  .image-column {
+    display: none;
+  }
+}
+
+/* End Services Section */
