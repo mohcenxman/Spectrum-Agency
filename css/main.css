@@ -2,6 +2,9 @@
 :root {
   --main-color: #03A9F4;
   --secondary-color: #607d8b;
+  --section-padding: 60px;
+  --section-background: #f6f6f6;
+  --paragraph-color: #777;
 }
 /* End Variables */
 
@@ -101,7 +104,7 @@ body {
   padding: 0;
   right: 0;
   position: absolute;
-  background-color: #f6f6f6;
+  background-color: var(--section-background);
   min-width: 150px;
   top: calc(100% + 15px);
   display: none;
@@ -115,7 +118,7 @@ body {
   content: "";
   border-width: 10px;
   border-style: solid;
-  border-color: transparent transparent #f6f6f6 transparent;
+  border-color: transparent transparent var(--section-background) transparent;
   position: absolute;
   top: -18px;
   right: 5px;
@@ -162,9 +165,9 @@ body {
 
 /* Start Features Section */
 .features {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #f6f6f6;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
 }
 .features .container {
   display: grid;
@@ -185,14 +188,14 @@ body {
 .features .feat p {
   font-size: 17px;
   line-height: 1.8;
-  color: #777;
+  color: var(--paragraph-color);
 }
 /* End Features Section */
 
 /* Start Services Section */
 .services {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 }
 .services .services-content {
   display: grid;
@@ -221,9 +224,9 @@ body {
   margin: 0 0 20px;
 }
 .services .services-content .service .text p {
-  color: #444;
+  color: var(--paragraph-color);
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 .services .services-content .image {
   text-align: center;
@@ -248,5 +251,35 @@ body {
     display: none;
   }
 }
-
 /* End Services Section */
+
+/* Start Portfolio Section */
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+.portfolio .portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 100px;
+}
+.portfolio .portfolio-content .card {
+  background-color: white;
+}
+.portfolio .portfolio-content .card img {
+  max-width: 100%;
+}
+.portfolio .portfolio-content .card .info {
+  padding: 20px;
+}
+.portfolio .portfolio-content .card .info h3 {
+  margin: 0;
+}
+.portfolio .portfolio-content .card .info p {
+  color: var(--paragraph-color);
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+/* End Portfolio Section */
